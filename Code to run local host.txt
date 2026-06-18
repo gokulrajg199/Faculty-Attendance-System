@@ -1,0 +1,14 @@
+cd /d "C:\Users\ADMISSION CELL\Desktop\Gokulraj Project\Faculty project"
+py -3.11 -m streamlit run app.py
+
+
+
+
+
+
+
+
+
+
+
+lqlvmsyngsnwyzsa
