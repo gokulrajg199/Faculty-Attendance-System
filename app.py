@@ -23,7 +23,7 @@ FACULTY_PHOTO_DIR = "faculty_photos"
 OD_DOC_DIR = "od_documents"
 LOGO_FILE = "college_logo.png"
 HEADER_FILE = "header_banner.png"
-YOLO_MODEL_FILE = "yolo11n.pt"
+YOLO_MODEL_FILE = "yolov8n.pt"
 
 os.makedirs(PHOTO_DIR, exist_ok=True)
 os.makedirs(FACULTY_PHOTO_DIR, exist_ok=True)
@@ -125,12 +125,9 @@ if "last_action" not in st.session_state:
 # LOADERS
 # =========================
 @st.cache_resource
+@st.cache_resource
 def load_model():
-    if not os.path.exists(YOLO_MODEL_FILE):
-        st.error(f"YOLO model not found: {YOLO_MODEL_FILE}")
-        st.stop()
-    return YOLO(YOLO_MODEL_FILE)
-
+    return YOLO("yolov8n.pt")
 
 @st.cache_data
 def load_faculty_data():
